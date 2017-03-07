@@ -42,8 +42,12 @@ class Test(unittest.TestCase):
 
         self.assertTrue('Por favor ingrese un día válido' in str(error.exception))
 
-        self.assertEqual(check(0,'martes'),0)
+        days = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes','sabado','domingo']
 
+        for x in days:
+
+            self.assertEqual(check(0,x),0)
+    
     # Tests the output when an acceptable and a wrong date is given
     def testcheckdate(self):
 
